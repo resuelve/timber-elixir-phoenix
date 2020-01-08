@@ -279,7 +279,8 @@ defmodule Timber.Phoenix do
 
     message = ["Joined channel ", channel, " with \"", topic, "\""]
 
-    Logger.log(log_level, message, event: event)
+    # Logger.log(log_level, message, event: event)
+    :ok
   end
 
   def phoenix_channel_join(:stop, _compile, :ok),
@@ -308,7 +309,8 @@ defmodule Timber.Phoenix do
 
     message = ["Received ", event_name, " on \"", topic, "\" to ", channel]
 
-    Logger.log(log_level, message, event: event)
+    # Logger.log(log_level, message, event: event)
+    :ok
   end
 
   def phoenix_channel_receive(:stop, _compile, :ok),
